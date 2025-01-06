@@ -1,0 +1,10 @@
+version: "2"
+services:
+  rusc-web:
+    image: nginx:latest
+    container_name: rusc-web
+    volumes:
+      - ./web/:/usr/share/nginx/html
+    ports:
+      - 8086:80
+    restart: unless-stopped
